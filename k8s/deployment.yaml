@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-exchange-api
+  namespace: file-exchange
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: file-exchange-api
+  template:
+    metadata:
+      labels:
+        app: file-exchange-api
+    spec:
+      containers:
+        - name: file-exchange-api
+          image: 976837153996.dkr.ecr.us-east-1.amazonaws.com/poc-file-exchange-app:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
