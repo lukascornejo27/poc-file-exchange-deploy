@@ -13,6 +13,7 @@ spec:
       labels:
         app: file-exchange-api
     spec:
+      serviceAccountName: file-exchange-api-sa
       containers:
         - name: file-exchange-api
           image: 976837153996.dkr.ecr.us-east-1.amazonaws.com/poc-file-exchange-api:v1
