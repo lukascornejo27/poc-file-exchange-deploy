@@ -1,0 +1,18 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: poc-file-exchange-eks
+  region: us-east-1   # ⚠️ ajustar si usaste otra región en ECR
+
+managedNodeGroups:
+  - name: ng-app
+    instanceType: t3a.medium
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
+    volumeSize: 20
+    privateNetworking: false
+
+iam:
+  withOIDC: true
