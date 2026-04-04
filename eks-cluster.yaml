@@ -16,3 +16,6 @@ managedNodeGroups:
 
 iam:
   withOIDC: true
+
+autoModeConfig:
+  enabled: false
