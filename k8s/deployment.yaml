@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: file-exchange-api
-          image: 976837153996.dkr.ecr.us-east-1.amazonaws.com/poc-file-exchange-app:v1
+          image: 976837153996.dkr.ecr.us-east-1.amazonaws.com/poc-file-exchange-api:v1
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
