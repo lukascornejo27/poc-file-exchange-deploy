@@ -16,7 +16,14 @@ spec:
       serviceAccountName: file-exchange-api-sa
       containers:
         - name: file-exchange-api
-          image: 976837153996.dkr.ecr.us-east-1.amazonaws.com/poc-file-exchange-api:v1
+          image: 976837153996.dkr.ecr.us-east-1.amazonaws.com/poc-file-exchange-api:v2
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
+          env:
+            - name: AWS_REGION
+              value: us-east-1
+            - name: S3_BUCKET_NAME
+              value: poc-file-exchange-lucas-001
+            - name: S3_PREFIX
+              value: inbound/
